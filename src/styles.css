@@ -227,7 +227,7 @@ box-shadow:  18px 18px 36px #ccd9d5,
 	position: fixed;
 	top: 20em;
 	left: -100vw;
-	transition: 0.5s;
+	transition: left 0.5s;
 }
 .mensaje_text{
 	font-size: 0.8em;

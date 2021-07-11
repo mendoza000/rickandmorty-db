@@ -43,9 +43,9 @@ const eventos = () => {
 			
 			await crearHtml(x)
 
-			mensaje.style.left = "0"
+			mensaje.style.left = "0vw"
 
-			setTimeout(function() {
+			await setTimeout(function() {
 				mensaje.style.left = "-100vw"
 			}, 4000);
 		

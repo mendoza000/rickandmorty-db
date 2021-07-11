@@ -31,19 +31,40 @@ html,body{
 	height: 3.5em;
 	align-items: center;
 	padding: 0 1em;
-	background: rgb(76,161,163);
-	background: linear-gradient(90deg, rgba(76,161,163,1) 10%, rgba(196,142,237,1) 100%);
+	background: var(--color-primary);
+	background: linear-gradient(90deg, var(--color-primary) 10%, var(--color-secondary-xl) 100%);
 	justify-content: space-between;
+}
+.nav{
+	margin-top: -2.7em;	
 }
 .nav_list{
 	list-style: none;
 	position: fixed;
-	background-color: var(--color-secondary);
+	background-color: rgb(196, 142, 237, 0.4);
 	height: 100vh;
 	width: 100vw;
 	left: -100vw;
 	margin: 0;
 	padding: 0;
+	transition: left 0.5s;
+	top: 0;
+	z-index: 10;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav_item{
+	margin: 1em;
+	padding: 1em;
+	background-color: var(--color-primary-l);
+	width: 7em;
+	text-align: center;
+	border-radius: 10px;
+	color: var(--text);
+	border: 2px solid var(--color-primary);
 }
 
 .nav_subtitle{
@@ -64,8 +85,10 @@ html,body{
 	background-color: rgb(76, 161, 163, 0.7);
 	border: 2px solid var(--color-primary-l);
 	position: sticky;
-	top: 0;
-	right: 10px;
+	top: 5px;
+	margin-left: auto;
+	margin-right: 0.5em;
+	z-index: 20;
 }
 
 /* Header */
@@ -167,8 +190,49 @@ box-shadow:  18px 18px 36px #ccd9d5,
 	margin-bottom: 5px;
 }
 
+.btnAdd{
+	display: flex;
+	position: sticky;
+	top: 50px;
+	margin-left: auto;
+	margin-right: 2em;
+	margin-bottom: 1em;
+	margin-top: -1em;
+	width: 100%;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	border-radius: 10px;
+	padding: 0.7em 0.5em;
+	background: var(--color-primary);
+	background: linear-gradient(90deg, var(--color-primary) 10%, var(--color-secondary-xl) 100%);
+	transition: all 1s;
+}
+.btnAdd:hover{
+	background: var(--color-primary-o);
+	background: linear-gradient(90deg, var(--color-primary-o) 10%, var(--color-secondary-l) 100%);
+}
+.btnAdd .icon {
+	color: var(--text-l);
+}
 
 
+.mensaje{
+	background: var(--color-secondary-xl);
+	background: linear-gradient(180deg, var(--color-secondary-xl) 10%, var(--color-primary) 100%);
+	padding: 1em 0.3em;
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+	position: fixed;
+	top: 20em;
+	left: -100vw;
+	transition: left 0.5s;
+}
+.mensaje_text{
+	font-size: 0.8em;
+	color: var(--color-bg);
+}
 
 
 
