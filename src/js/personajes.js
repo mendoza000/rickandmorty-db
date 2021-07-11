@@ -33,6 +33,7 @@ const crearHtml = async (num) =>{
 
 const eventos = () => {
 	const btnAdd = document.querySelector('#container');
+	const mensaje = document.querySelector('.mensaje');
 	
 	btnAdd.addEventListener('click', async function(e) {
 		const elem = e.target.classList.contains("btnAdd")
@@ -41,6 +42,12 @@ const eventos = () => {
 			let x = count + 10
 			
 			await crearHtml(x)
+
+			mensaje.style.left = "0"
+
+			setTimeout(function() {
+				mensaje.style.left = "-100vw"
+			}, 4000);
 		
 			return count = x
 		}
