@@ -2,7 +2,7 @@
 
 <img src="https://image.flaticon.com/icons/png/512/1374/1374413.png" alt="drawing" width="250"/>
 
-# Rick and Morty DataBase
+# [Rick and Morty Database](https://mendoza000.github.io/rickandmorty-db/)
 
 </div>
 
