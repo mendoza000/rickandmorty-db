@@ -1,10 +1,11 @@
 import { getData } from './service'
+let count = 10
 
-const crearHtml = async () =>{
+const crearHtml = async (num) =>{
 
 	const container = document.querySelector('#container');
 
-	const data = await getData()
+	const data = await getData(num)
 
 	data.forEach((elem) => {
 
@@ -16,7 +17,9 @@ const crearHtml = async () =>{
 			<span class="card_text">${
 				(elem.status === "Alive")
 				? '<i class="icon lar la-heart"></i>'
-				: '<i class="icon las la-skull-crossbones"></i>'
+				: (elem.status === "Dead")
+				? '<i class="icon las la-skull-crossbones"></i>'
+				: '<i class="icon las la-exclamation-triangle"></i>'
 			} Estado: ${elem.status}</span>
 			<span class="card_text"><i class="icon las la-leaf"></i> Especie: ${elem.species}</span>
 			<span class="card_text"><i class="icon las la-cloud-sun"></i> Origen: ${elem.origin.name}</span>
@@ -28,8 +31,25 @@ const crearHtml = async () =>{
 
 }
 
+const eventos = () => {
+	const btnAdd = document.querySelector('#container');
+	
+	btnAdd.addEventListener('click', async function(e) {
+		const elem = e.target.classList.contains("btnAdd")
+
+		if (elem) {
+			let x = count + 10
+			
+			await crearHtml(x)
+		
+			return count = x
+		}
+	});
+}
+
 
 
 export const init = () => {
-	crearHtml()
+	crearHtml(count)
+	eventos()
 }
